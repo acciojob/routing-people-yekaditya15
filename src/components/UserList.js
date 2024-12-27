@@ -7,19 +7,22 @@ const UserList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      .then((response) => {
-        setUsers(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching user list:", error);
-        setLoading(false);
-      });
+    // Simulate a loading time
+    setTimeout(() => {
+      axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          setUsers(response.data);
+          setLoading(false); // Set loading to false after data is fetched
+        })
+        .catch((error) => {
+          console.error("Error fetching user list:", error);
+          setLoading(false); // Set loading to false in case of an error
+        });
+    }, 1000); // Simulate 1 second loading time
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>; // Display the loading message inside a <div>
 
   return (
     <ul>
