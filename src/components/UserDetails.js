@@ -20,7 +20,7 @@ const UserDetails = () => {
       });
   }, [id]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div data-testid="loading">Loading...</div>;
 
   return (
     <div>
@@ -38,4 +38,5 @@ const UserDetails = () => {
     </div>
   );
 };
+
 export default UserDetails;
