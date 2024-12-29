@@ -14,6 +14,7 @@ const UserList = () => {
 
   return (
     <div>
+      <div id="loading">Loading...</div>
       <h1>User List</h1>
       <ul>
         {users.map((user) => (
@@ -51,6 +52,7 @@ const UserDetails = ({ match }) => {
     <div>
       {user ? (
         <div>
+          <div id="loading">Loading...</div>
           <h1>User Details</h1>
           <p>Name: {user.name}</p>
           <p>Username: {user.username}</p>
