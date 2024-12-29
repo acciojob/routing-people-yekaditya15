@@ -44,7 +44,7 @@ const UserDetails = ({ match }) => {
   }, [id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>; // This will display the "Loading..." message
   }
 
   return (
